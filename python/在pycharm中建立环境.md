@@ -23,11 +23,9 @@ python -m venv venv
 - 如果你有 `requirements.txt`文件，可以直接安装：
 
   ```
-  sh
-  复制代码
   pip install -r requirements.txt
   ```
-
+  
 - 或者手动安装需要的库：
 
   ```
