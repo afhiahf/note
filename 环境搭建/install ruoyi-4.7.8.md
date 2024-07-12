@@ -58,11 +58,16 @@ SET GLOBAL validate_password_special_char_count=0;
 CREATE DATABASE ry;
 
 # 退出 MySQL
-exit;
+quit;
 
 # 导入数据脚本（假设脚本在当前目录下）
 mysql -u root -p ry < ry_2021xxxx.sql
 mysql -u root -p ry < quartz.sql
+
+FLUSH PRIVILEGES;
+
+# 增加数据库安全性（可选）
+sudo mysql_secure_installation
 ```
 
 ### 7. 修改配置文件
