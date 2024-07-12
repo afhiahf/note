@@ -37,6 +37,7 @@ mysql -u root -p
 
 # 创建新用户
 CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+# 刷新权限
 FLUSH PRIVILEGES;
 
 # 修改 root 用户密码
@@ -64,7 +65,8 @@ quit;
 mysql -u root -p ry < ry_2021xxxx.sql
 mysql -u root -p ry < quartz.sql
 
-FLUSH PRIVILEGES;
+# 重启数据库
+sudo systemctl restart mysql
 
 # 增加数据库安全性（可选）
 sudo mysql_secure_installation
